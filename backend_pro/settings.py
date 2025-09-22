@@ -43,6 +43,9 @@ CORS_ALLOWED_ORIGINS = env.list(
 )
 CORS_ALLOW_CREDENTIALS = env.bool("CORS_ALLOW_CREDENTIALS", default=True)
 
+import urllib.parse
+
+print(urllib.parse.quote_plus("Hc-+7uQ*?4BXY+x"))
 
 # Application definition
 
@@ -178,6 +181,9 @@ DATABASES = {
         "PASSWORD": env("DB_PASSWORD"),
         "HOST": env("DB_HOST"),
         "PORT": env("DB_PORT"),
+        "OPTIONS": {
+            "sslmode": "require",  # Supabase requires SSL
+        },
     }
 }
 
