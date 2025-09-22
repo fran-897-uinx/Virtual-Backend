@@ -1,0 +1,7 @@
+# environment virable
+
+.env*
+ 
+#  datainfo
+
+db.sqlite3 
