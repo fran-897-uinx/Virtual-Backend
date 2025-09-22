@@ -1,4 +1,5 @@
 from rest_framework import generics
+from django.http import JsonResponse
 from .models import Home, About,Testimonails,Service
 from .serializers import HomeSerializer, AboutSerializer,TestimonySerializer,ServicesSerializer
 
@@ -20,3 +21,7 @@ class TestimonailsView(generics.ListAPIView):
 class ServicesView(generics.ListAPIView):
     queryset = Service.objects.all()
     serializer_class = ServicesSerializer
+
+
+def root_view(request):
+    return JsonResponse({"status": "ok", "message": "Backend is running"})

@@ -20,13 +20,15 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.middleware.csrf import get_token
 from django.http import JsonResponse
+from django.views.generic import RedirectView
 
 def get_csrf_token(request):
     return JsonResponse({'csrfToken': get_token(request)})
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("api/",include("core.urls")),
+    path("favicon.ico", RedirectView.as_view(url="/static/favicon.ico"))
+    path("",include("core.urls")),
     path("api/blog/",include("django_apps.blog.urls")),
     path("api/contact/",include("django_apps.contact.urls")),
     path("api/projects/",include("django_apps.projects.urls")),
