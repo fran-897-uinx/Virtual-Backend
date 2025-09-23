@@ -10,6 +10,7 @@ class Project(models.Model):
     tech_stack = models.CharField(max_length=200)
     live_link = models.URLField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    external_images = models.JSONField(default=list, blank=True)
 
     def __str__(self):
         return f"{self.title} - {self.description} - {self.image} - {self.github_link} - {self.tech_stack} - {self.live_link} - {self.created_at}"
