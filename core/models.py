@@ -27,10 +27,9 @@ class About(models.Model):
 class Testimonails(models.Model):
     name = models.CharField(max_length=200)
     testimonial = models.TextField()
-    avatar = models.ImageField(upload_to="testimonials/", blank=True, null=True)
+    avatar = models.URLField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     role = models.CharField(max_length=200, blank=True, null=True)
-    external_images = models.JSONField(default=list, blank=True)
     def __str__(self):
         return self.name
 
