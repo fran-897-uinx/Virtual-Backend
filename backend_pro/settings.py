@@ -103,6 +103,54 @@ WSGI_APPLICATION = 'backend_pro.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+if DATABASE_URL:
+    DATABASES = {
+        "default": dj_database_url.parse(
+            DATABASE_URL,
+            conn_max_age=600,
+            ssl_require=True,
+        )
+    }
+else:
+    # Manual postgres (Aiven)
+    POSTGRES_READY = os.getenv("POSTGRES_READY", "False") == "True"
+
+    DB_USERNAME = os.getenv("POSTGRES_USR")
+    DB_PASSWORD = os.getenv("POSTGRES_PASSWORD")
+    DB_DATABASE = os.getenv("POSTGRES_DB")
+    DB_HOST = os.getenv("POSTGRES_HOST")
+    DB_PORT = os.getenv("POSTGRES_PORT", "5432")
+
+    if (
+        all([DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_HOST, DB_PORT])
+        and POSTGRES_READY
+    ):
+        DATABASES = {
+            "default": {
+                "ENGINE": "django.db.backends.postgresql",
+                "NAME": DB_DATABASE,
+                "USER": DB_USERNAME,
+                "PASSWORD": DB_PASSWORD,
+                "HOST": DB_HOST,
+                "PORT": DB_PORT,
+                "OPTIONS": {
+                    "connect_timeout": 5,
+                    "sslmode": "require",
+                },
+            }
+        }
+    else:
+        print("Using SQLite Database")
+        DATABASES = {
+            "default": {
+                "ENGINE": "django.db.backends.sqlite3",
+                "NAME": BASE_DIR / "db.sqlite3",
+            }
+        }
+# print(DATABASES)
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
