@@ -25,3 +25,4 @@ tweepy==4.16.0
 tzdata==2025.2
 urllib3==2.5.0
 whitenoise==6.11.0
+dj-database-url==3.0.1
