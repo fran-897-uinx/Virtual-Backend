@@ -34,7 +34,9 @@ environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
+ALLOWED_HOSTS = os.environ.get(
+    "ALLOWED_HOSTS", "127.0.0.1, localhost, 0.0.0.0, 192.168.1.5"
+).split(",")
 
 
 # CORS
@@ -45,7 +47,7 @@ CORS_ALLOW_CREDENTIALS = env.bool("CORS_ALLOW_CREDENTIALS", default=True)
 
 import urllib.parse
 
-print(urllib.parse.quote_plus("Hc-+7uQ*?4BXY+x"))
+# print(urllib.parse.quote_plus("Hc-+7uQ*?4BXY+x"))
 
 # Application definition
 
@@ -115,7 +117,7 @@ if DATABASE_URL:
     }
 else:
     # Manual postgres (Aiven)
-    POSTGRES_READY = os.getenv("POSTGRES_READY", "False") == "True"
+    POSTGRES_READY = os.getenv("POSTGRES_READY") == "False"
 
     DB_USERNAME = os.getenv("POSTGRES_USR")
     DB_PASSWORD = os.getenv("POSTGRES_PASSWORD")
@@ -123,10 +125,7 @@ else:
     DB_HOST = os.getenv("POSTGRES_HOST")
     DB_PORT = os.getenv("POSTGRES_PORT", "5432")
 
-    if (
-        all([DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_HOST, DB_PORT])
-        and POSTGRES_READY
-    ):
+    if all([DB_USERNAME, DB_PASSWORD, DB_DATABASE, DB_HOST, DB_PORT]):
         DATABASES = {
             "default": {
                 "ENGINE": "django.db.backends.postgresql",
@@ -149,15 +148,16 @@ else:
                 "NAME": BASE_DIR / "db.sqlite3",
             }
         }
-# print(DATABASES)
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
+
+print(DATABASES)
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
@@ -198,7 +198,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_ROOT = BASE_DIR / "media"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
@@ -234,3 +234,9 @@ sentry_sdk.init(
     traces_sample_rate=1.0,
     send_default_pii=True,
 )
+
+from django.conf import settings
+
+
+def build_absolute_uri(relative_url):
+    return settings.BASE_URL + relative_url

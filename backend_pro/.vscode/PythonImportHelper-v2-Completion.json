@@ -1,0 +1,476 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "environ",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "environ",
+        "description": "environ",
+        "detail": "environ",
+        "documentation": {}
+    },
+    {
+        "label": "dj_database_url",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "dj_database_url",
+        "description": "dj_database_url",
+        "detail": "dj_database_url",
+        "documentation": {}
+    },
+    {
+        "label": "sentry_sdk",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sentry_sdk",
+        "description": "sentry_sdk",
+        "detail": "sentry_sdk",
+        "documentation": {}
+    },
+    {
+        "label": "DjangoIntegration",
+        "importPath": "sentry_sdk.integrations.django",
+        "description": "sentry_sdk.integrations.django",
+        "isExtraImport": true,
+        "detail": "sentry_sdk.integrations.django",
+        "documentation": {}
+    },
+    {
+        "label": "urllib.parse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "get_token",
+        "importPath": "django.middleware.csrf",
+        "description": "django.middleware.csrf",
+        "isExtraImport": true,
+        "detail": "django.middleware.csrf",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "RedirectView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "asgi",
+        "description": "asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nenv = environ.Env()\nenviron.Env.read_env(os.path.join(BASE_DIR, \".env\"))\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\n# SECRET_KEY = 'django-insecure-bf&61)=)=3+gv6=a61fm-=8db@$(5xrpdxzc5izdko_d$f&3l*'\n# SECURITY WARNING: don't run with debug turned on in production!\n# DEBUG = True\nALLOWED_HOSTS = os.environ.get(\"ALLOWED_HOSTS\", \"127.0.0.1,localhost\").split(\",\")",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "env",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "env = environ.Env()\nenviron.Env.read_env(os.path.join(BASE_DIR, \".env\"))\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\n# SECRET_KEY = 'django-insecure-bf&61)=)=3+gv6=a61fm-=8db@$(5xrpdxzc5izdko_d$f&3l*'\n# SECURITY WARNING: don't run with debug turned on in production!\n# DEBUG = True\nALLOWED_HOSTS = os.environ.get(\"ALLOWED_HOSTS\", \"127.0.0.1,localhost\").split(\",\")\n# CORS",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "ALLOWED_HOSTS = os.environ.get(\"ALLOWED_HOSTS\", \"127.0.0.1,localhost\").split(\",\")\n# CORS\nCORS_ALLOWED_ORIGINS = env.list(\n    \"CORS_ALLOWED_ORIGINS\", default=[\"http://localhost:3000\"]\n)\nCORS_ALLOW_CREDENTIALS = env.bool(\"CORS_ALLOW_CREDENTIALS\", default=True)\nimport urllib.parse\nprint(urllib.parse.quote_plus(\"Hc-+7uQ*?4BXY+x\"))\n# Application definition\nINSTALLED_APPS = [",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOWED_ORIGINS",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "CORS_ALLOWED_ORIGINS = env.list(\n    \"CORS_ALLOWED_ORIGINS\", default=[\"http://localhost:3000\"]\n)\nCORS_ALLOW_CREDENTIALS = env.bool(\"CORS_ALLOW_CREDENTIALS\", default=True)\nimport urllib.parse\nprint(urllib.parse.quote_plus(\"Hc-+7uQ*?4BXY+x\"))\n# Application definition\nINSTALLED_APPS = [\n    'rest_framework',\n    'django.contrib.admin',",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOW_CREDENTIALS",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "CORS_ALLOW_CREDENTIALS = env.bool(\"CORS_ALLOW_CREDENTIALS\", default=True)\nimport urllib.parse\nprint(urllib.parse.quote_plus(\"Hc-+7uQ*?4BXY+x\"))\n# Application definition\nINSTALLED_APPS = [\n    'rest_framework',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'rest_framework',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    \"corsheaders\",\n    'core',",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "MIDDLEWARE = [\n    \"corsheaders.middleware.CorsMiddleware\",\n    'django.middleware.security.SecurityMiddleware',\n    \"whitenoise.middleware.WhiteNoiseMiddleware\",\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "ROOT_URLCONF = 'backend_pro.urls'\nMIDDLEWARE.insert(0, \"corsheaders.middleware.CorsMiddleware\")\nCORS_ALLOW_CREDENTIALS = True\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOW_CREDENTIALS",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "CORS_ALLOW_CREDENTIALS = True\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',\n                'django.contrib.messages.context_processors.messages',",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "WSGI_APPLICATION = 'backend_pro.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.2/ref/settings/#databases\n# DATABASE_URL = os.getenv(\"DATABASE_URL\")\n# if DATABASE_URL:\n#     DATABASES = {\n#         \"default\": dj_database_url.parse(\n#             DATABASE_URL,\n#             conn_max_age=600,\n#             ssl_require=True,",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    }\n}\nprint(DATABASES)\n# Password validation\n# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media\")",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media\")\n# Default primary key field type",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "STATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {\n    \"DEFAULT_RENDERER_CLASSES\": [\n        \"rest_framework.renderers.JSONRenderer\",",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {\n    \"DEFAULT_RENDERER_CLASSES\": [\n        \"rest_framework.renderers.JSONRenderer\",\n    ]",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "MEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {\n    \"DEFAULT_RENDERER_CLASSES\": [\n        \"rest_framework.renderers.JSONRenderer\",\n    ]\n}",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, \"media\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {\n    \"DEFAULT_RENDERER_CLASSES\": [\n        \"rest_framework.renderers.JSONRenderer\",\n    ]\n}\nSECRET_KEY = env(\"SECRET_KEY\")",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {\n    \"DEFAULT_RENDERER_CLASSES\": [\n        \"rest_framework.renderers.JSONRenderer\",\n    ]\n}\nSECRET_KEY = env(\"SECRET_KEY\")\nDEBUG = env.bool(\"DEBUG\", default=False)\nEMAIL_BACKEND = env(\"EMAIL_BACKEND\", default=\"django.core.mail.backends.smtp.EmailBackend\")\nEMAIL_HOST = env(\"EMAIL_HOST\", default=\"smtp.gmail.com\")",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "REST_FRAMEWORK",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "REST_FRAMEWORK = {\n    \"DEFAULT_RENDERER_CLASSES\": [\n        \"rest_framework.renderers.JSONRenderer\",\n    ]\n}\nSECRET_KEY = env(\"SECRET_KEY\")\nDEBUG = env.bool(\"DEBUG\", default=False)\nEMAIL_BACKEND = env(\"EMAIL_BACKEND\", default=\"django.core.mail.backends.smtp.EmailBackend\")\nEMAIL_HOST = env(\"EMAIL_HOST\", default=\"smtp.gmail.com\")\nEMAIL_PORT = env.int(\"EMAIL_PORT\", default=587)",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "SECRET_KEY = env(\"SECRET_KEY\")\nDEBUG = env.bool(\"DEBUG\", default=False)\nEMAIL_BACKEND = env(\"EMAIL_BACKEND\", default=\"django.core.mail.backends.smtp.EmailBackend\")\nEMAIL_HOST = env(\"EMAIL_HOST\", default=\"smtp.gmail.com\")\nEMAIL_PORT = env.int(\"EMAIL_PORT\", default=587)\nEMAIL_USE_TLS = env.bool(\"EMAIL_USE_TLS\", default=True)\nEMAIL_HOST_USER = env(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = env(\"EMAIL_HOST_PASSWORD\")\nDEFAULT_FROM_EMAIL=EMAIL_HOST_USER\nENGINE = \"django.db.backends.sqlite3\"",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "DEBUG = env.bool(\"DEBUG\", default=False)\nEMAIL_BACKEND = env(\"EMAIL_BACKEND\", default=\"django.core.mail.backends.smtp.EmailBackend\")\nEMAIL_HOST = env(\"EMAIL_HOST\", default=\"smtp.gmail.com\")\nEMAIL_PORT = env.int(\"EMAIL_PORT\", default=587)\nEMAIL_USE_TLS = env.bool(\"EMAIL_USE_TLS\", default=True)\nEMAIL_HOST_USER = env(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = env(\"EMAIL_HOST_PASSWORD\")\nDEFAULT_FROM_EMAIL=EMAIL_HOST_USER\nENGINE = \"django.db.backends.sqlite3\"\nNAME = BASE_DIR / \"db.sqlite3\"",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_BACKEND",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "EMAIL_BACKEND = env(\"EMAIL_BACKEND\", default=\"django.core.mail.backends.smtp.EmailBackend\")\nEMAIL_HOST = env(\"EMAIL_HOST\", default=\"smtp.gmail.com\")\nEMAIL_PORT = env.int(\"EMAIL_PORT\", default=587)\nEMAIL_USE_TLS = env.bool(\"EMAIL_USE_TLS\", default=True)\nEMAIL_HOST_USER = env(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = env(\"EMAIL_HOST_PASSWORD\")\nDEFAULT_FROM_EMAIL=EMAIL_HOST_USER\nENGINE = \"django.db.backends.sqlite3\"\nNAME = BASE_DIR / \"db.sqlite3\"\n# Sentry",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "EMAIL_HOST = env(\"EMAIL_HOST\", default=\"smtp.gmail.com\")\nEMAIL_PORT = env.int(\"EMAIL_PORT\", default=587)\nEMAIL_USE_TLS = env.bool(\"EMAIL_USE_TLS\", default=True)\nEMAIL_HOST_USER = env(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = env(\"EMAIL_HOST_PASSWORD\")\nDEFAULT_FROM_EMAIL=EMAIL_HOST_USER\nENGINE = \"django.db.backends.sqlite3\"\nNAME = BASE_DIR / \"db.sqlite3\"\n# Sentry\nsentry_sdk.init(",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_PORT",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "EMAIL_PORT = env.int(\"EMAIL_PORT\", default=587)\nEMAIL_USE_TLS = env.bool(\"EMAIL_USE_TLS\", default=True)\nEMAIL_HOST_USER = env(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = env(\"EMAIL_HOST_PASSWORD\")\nDEFAULT_FROM_EMAIL=EMAIL_HOST_USER\nENGINE = \"django.db.backends.sqlite3\"\nNAME = BASE_DIR / \"db.sqlite3\"\n# Sentry\nsentry_sdk.init(\n    dsn=env(\"SENTRY_DSN\"),",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_USE_TLS",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "EMAIL_USE_TLS = env.bool(\"EMAIL_USE_TLS\", default=True)\nEMAIL_HOST_USER = env(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = env(\"EMAIL_HOST_PASSWORD\")\nDEFAULT_FROM_EMAIL=EMAIL_HOST_USER\nENGINE = \"django.db.backends.sqlite3\"\nNAME = BASE_DIR / \"db.sqlite3\"\n# Sentry\nsentry_sdk.init(\n    dsn=env(\"SENTRY_DSN\"),\n    integrations=[DjangoIntegration()],",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_USER",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "EMAIL_HOST_USER = env(\"EMAIL_HOST_USER\")\nEMAIL_HOST_PASSWORD = env(\"EMAIL_HOST_PASSWORD\")\nDEFAULT_FROM_EMAIL=EMAIL_HOST_USER\nENGINE = \"django.db.backends.sqlite3\"\nNAME = BASE_DIR / \"db.sqlite3\"\n# Sentry\nsentry_sdk.init(\n    dsn=env(\"SENTRY_DSN\"),\n    integrations=[DjangoIntegration()],\n    traces_sample_rate=1.0,",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_PASSWORD",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "EMAIL_HOST_PASSWORD = env(\"EMAIL_HOST_PASSWORD\")\nDEFAULT_FROM_EMAIL=EMAIL_HOST_USER\nENGINE = \"django.db.backends.sqlite3\"\nNAME = BASE_DIR / \"db.sqlite3\"\n# Sentry\nsentry_sdk.init(\n    dsn=env(\"SENTRY_DSN\"),\n    integrations=[DjangoIntegration()],\n    traces_sample_rate=1.0,\n    send_default_pii=True,",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "ENGINE",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "ENGINE = \"django.db.backends.sqlite3\"\nNAME = BASE_DIR / \"db.sqlite3\"\n# Sentry\nsentry_sdk.init(\n    dsn=env(\"SENTRY_DSN\"),\n    integrations=[DjangoIntegration()],\n    traces_sample_rate=1.0,\n    send_default_pii=True,\n)",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "NAME",
+        "kind": 5,
+        "importPath": "settings",
+        "description": "settings",
+        "peekOfCode": "NAME = BASE_DIR / \"db.sqlite3\"\n# Sentry\nsentry_sdk.init(\n    dsn=env(\"SENTRY_DSN\"),\n    integrations=[DjangoIntegration()],\n    traces_sample_rate=1.0,\n    send_default_pii=True,\n)",
+        "detail": "settings",
+        "documentation": {}
+    },
+    {
+        "label": "get_csrf_token",
+        "kind": 2,
+        "importPath": "urls",
+        "description": "urls",
+        "peekOfCode": "def get_csrf_token(request):\n    return JsonResponse({'csrfToken': get_token(request)})\nurlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"favicon.ico\", RedirectView.as_view(url=\"/static/favicon.ico\")),\n    path(\"\", include(\"core.urls\")),\n    path(\"api/blog/\", include(\"django_apps.blog.urls\")),\n    path(\"api/contact/\", include(\"django_apps.contact.urls\")),\n    path(\"api/projects/\", include(\"django_apps.projects.urls\")),\n    path(\"api/csrf/\", get_csrf_token, name=\"csrf_token\"),",
+        "detail": "urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "urls",
+        "description": "urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"favicon.ico\", RedirectView.as_view(url=\"/static/favicon.ico\")),\n    path(\"\", include(\"core.urls\")),\n    path(\"api/blog/\", include(\"django_apps.blog.urls\")),\n    path(\"api/contact/\", include(\"django_apps.contact.urls\")),\n    path(\"api/projects/\", include(\"django_apps.projects.urls\")),\n    path(\"api/csrf/\", get_csrf_token, name=\"csrf_token\"),\n]\nif settings.DEBUG:",
+        "detail": "urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "wsgi",
+        "description": "wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "wsgi",
+        "documentation": {}
+    }
+]
