@@ -6,5 +6,10 @@ echo "migration database..."
 python manage.py makemigrations
 python manage.py migrate
 
+echo "Creating superuser..."
+export $(grep -v '^#' .env | xargs)
+bash create_ad.sh
+
+
 echo "Build completed."
 echo "You can now run the server using: python manage.py runserver"
