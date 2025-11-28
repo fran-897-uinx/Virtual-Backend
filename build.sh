@@ -7,3 +7,4 @@ python manage.py makemigrations
 python manage.py migrate
 
 echo "Build completed."
+echo "You can now run the server using: python manage.py runserver"
