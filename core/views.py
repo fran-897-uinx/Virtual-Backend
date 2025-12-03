@@ -10,6 +10,10 @@ from .serializers import (
 )
 
 
+def root_view(request):
+    return JsonResponse({"status": "ok", "message": "Backend is running"})
+
+
 class HomeAPI(APIView):
     def get(self, request):
         home = Home.objects.all()
