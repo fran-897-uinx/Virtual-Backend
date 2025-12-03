@@ -256,14 +256,6 @@
         "documentation": {}
     },
     {
-        "label": "JsonResponse",
-        "importPath": "django.http",
-        "description": "django.http",
-        "isExtraImport": true,
-        "detail": "django.http",
-        "documentation": {}
-    },
-    {
         "label": "RedirectView",
         "importPath": "django.views.generic",
         "description": "django.views.generic",
@@ -609,15 +601,7 @@
         "documentation": {}
     },
     {
-        "label": "generics",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "parsers",
+        "label": "status",
         "importPath": "rest_framework",
         "description": "rest_framework",
         "isExtraImport": true,
@@ -702,6 +686,38 @@
         "description": "django.test",
         "isExtraImport": true,
         "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
         "documentation": {}
     },
     {
@@ -719,22 +735,6 @@
         "importPath": "feedparser",
         "description": "feedparser",
         "detail": "feedparser",
-        "documentation": {}
-    },
-    {
-        "label": "Response",
-        "importPath": "rest_framework.response",
-        "description": "rest_framework.response",
-        "isExtraImport": true,
-        "detail": "rest_framework.response",
-        "documentation": {}
-    },
-    {
-        "label": "APIView",
-        "importPath": "rest_framework.views",
-        "description": "rest_framework.views",
-        "isExtraImport": true,
-        "detail": "rest_framework.views",
         "documentation": {}
     },
     {
@@ -810,7 +810,7 @@
         "kind": 5,
         "importPath": "backend_pro.settings",
         "description": "backend_pro.settings",
-        "peekOfCode": "env = environ.Env()\nenviron.Env.read_env(os.path.join(BASE_DIR, \".env.local\"))\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\n# SECRET_KEY = 'django-insecure-bf&61)=)=3+gv6=a61fm-=8db@$(5xrpdxzc5izdko_d$f&3l*'\n# SECURITY WARNING: don't run with debug turned on in production!\n# DEBUG = True\nALLOWED_HOSTS = os.environ.get(\n    \"ALLOWED_HOSTS\", \"127.0.0.1, localhost, 0.0.0.0, 192.168.1.5\"",
+        "peekOfCode": "env = environ.Env()\nenviron.Env.read_env(os.path.join(BASE_DIR, \".env.local\"))\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\n# SECRET_KEY = 'django-insecure-bf&61)=)=3+gv6=a61fm-=8db@$(5xrpdxzc5izdko_d$f&3l*'\n# SECURITY WARNING: don't run with debug turned on in production!\n# DEBUG = True\nALLOWED_HOSTS = os.environ.get(\n    \"ALLOWED_HOSTS\", \"code-port-backend.onrender.com,francisdav.vercel.app,  localhost,\"",
         "detail": "backend_pro.settings",
         "documentation": {}
     },
@@ -819,7 +819,7 @@
         "kind": 5,
         "importPath": "backend_pro.settings",
         "description": "backend_pro.settings",
-        "peekOfCode": "ALLOWED_HOSTS = os.environ.get(\n    \"ALLOWED_HOSTS\", \"127.0.0.1, localhost, 0.0.0.0, 192.168.1.5\"\n).split(\",\")\n# CORS\nCORS_ALLOWED_ORIGINS = env.list(\n    \"CORS_ALLOWED_ORIGINS\", default=[\"http://localhost:3000\"]\n)\nCORS_ALLOW_CREDENTIALS = env.bool(\"CORS_ALLOW_CREDENTIALS\", default=True)\nimport urllib.parse\n# print(urllib.parse.quote_plus(\"Hc-+7uQ*?4BXY+x\"))",
+        "peekOfCode": "ALLOWED_HOSTS = os.environ.get(\n    \"ALLOWED_HOSTS\", \"code-port-backend.onrender.com,francisdav.vercel.app,  localhost,\"\n).split(\",\")\n# CORS\nCORS_ALLOWED_ORIGINS = env.list(\n    \"CORS_ALLOWED_ORIGINS\", default=[\"http://localhost:3000\"]\n)\nCORS_ALLOW_CREDENTIALS = env.bool(\"CORS_ALLOW_CREDENTIALS\", default=True)\nimport urllib.parse\n# print(urllib.parse.quote_plus(\"Hc-+7uQ*?4BXY+x\"))",
         "detail": "backend_pro.settings",
         "documentation": {}
     },
@@ -1296,7 +1296,7 @@
         "kind": 6,
         "importPath": "core.serializers",
         "description": "core.serializers",
-        "peekOfCode": "class AbsoluteURLMixin:\n    def get_absolute_image_url(self, request, image_field):\n        if image_field and hasattr(image_field, \"url\"):\n            return request.build_absolute_uri(image_field.url)\n        return None\nclass HomeSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Home\n        fields = \"__all__\"\nclass AboutSerializer(serializers.ModelSerializer, AbsoluteURLMixin):",
+        "peekOfCode": "class AbsoluteURLMixin:\n    \"\"\"\n    Helper mixin to return absolute URLs for image fields (works with Cloudinary).\n    \"\"\"\n    def get_absolute_image_url(self, request, image_field):\n        if image_field and hasattr(image_field, \"url\"):\n            return request.build_absolute_uri(image_field.url)\n        return None\nclass HomeSerializer(serializers.ModelSerializer):\n    class Meta:",
         "detail": "core.serializers",
         "documentation": {}
     },
@@ -1346,47 +1346,38 @@
         "documentation": {}
     },
     {
-        "label": "HomeView",
+        "label": "HomeAPI",
         "kind": 6,
         "importPath": "core.views",
         "description": "core.views",
-        "peekOfCode": "class HomeView(generics.ListAPIView):\n    queryset = Home.objects.all()\n    serializer_class = HomeSerializer\n    parser_classes = [parsers.MultiPartParser, parsers.FormParser]\nclass AboutView(generics.ListAPIView):\n    queryset = About.objects.all()\n    serializer_class = AboutSerializer\n    parser_classes = [parsers.MultiPartParser, parsers.FormParser]\nclass TestimonailsView(generics.ListAPIView):\n    queryset = Testimonails.objects.all()",
+        "peekOfCode": "class HomeAPI(APIView):\n    def get(self, request):\n        home = Home.objects.all()\n        serializer = HomeSerializer(home, many=True, context={\"request\": request})\n        return Response(serializer.data, status=status.HTTP_200_OK)\nclass AboutAPI(APIView):\n    def get(self, request):\n        about = About.objects.all()\n        serializer = AboutSerializer(about, many=True, context={\"request\": request})\n        return Response(serializer.data, status=status.HTTP_200_OK)",
         "detail": "core.views",
         "documentation": {}
     },
     {
-        "label": "AboutView",
+        "label": "AboutAPI",
         "kind": 6,
         "importPath": "core.views",
         "description": "core.views",
-        "peekOfCode": "class AboutView(generics.ListAPIView):\n    queryset = About.objects.all()\n    serializer_class = AboutSerializer\n    parser_classes = [parsers.MultiPartParser, parsers.FormParser]\nclass TestimonailsView(generics.ListAPIView):\n    queryset = Testimonails.objects.all()\n    serializer_class = TestimonialSerializer\n    parser_classes = [parsers.MultiPartParser, parsers.FormParser]\nclass ServicesView(generics.ListAPIView):\n    queryset = Service.objects.all()",
+        "peekOfCode": "class AboutAPI(APIView):\n    def get(self, request):\n        about = About.objects.all()\n        serializer = AboutSerializer(about, many=True, context={\"request\": request})\n        return Response(serializer.data, status=status.HTTP_200_OK)\nclass ServicesAPI(APIView):\n    def get(self, request):\n        services = Service.objects.all()\n        serializer = ServicesSerializer(\n            services, many=True, context={\"request\": request}",
         "detail": "core.views",
         "documentation": {}
     },
     {
-        "label": "TestimonailsView",
+        "label": "ServicesAPI",
         "kind": 6,
         "importPath": "core.views",
         "description": "core.views",
-        "peekOfCode": "class TestimonailsView(generics.ListAPIView):\n    queryset = Testimonails.objects.all()\n    serializer_class = TestimonialSerializer\n    parser_classes = [parsers.MultiPartParser, parsers.FormParser]\nclass ServicesView(generics.ListAPIView):\n    queryset = Service.objects.all()\n    serializer_class = ServicesSerializer\n    parser_classes = [parsers.MultiPartParser, parsers.FormParser]\ndef root_view(request):\n    return JsonResponse({\"status\": \"ok\", \"message\": \"Backend is running\"})",
+        "peekOfCode": "class ServicesAPI(APIView):\n    def get(self, request):\n        services = Service.objects.all()\n        serializer = ServicesSerializer(\n            services, many=True, context={\"request\": request}\n        )\n        return Response(serializer.data, status=status.HTTP_200_OK)\nclass TestimonialsAPI(APIView):\n    def get(self, request):\n        testimonials = Testimonails.objects.all()",
         "detail": "core.views",
         "documentation": {}
     },
     {
-        "label": "ServicesView",
+        "label": "TestimonialsAPI",
         "kind": 6,
         "importPath": "core.views",
         "description": "core.views",
-        "peekOfCode": "class ServicesView(generics.ListAPIView):\n    queryset = Service.objects.all()\n    serializer_class = ServicesSerializer\n    parser_classes = [parsers.MultiPartParser, parsers.FormParser]\ndef root_view(request):\n    return JsonResponse({\"status\": \"ok\", \"message\": \"Backend is running\"})",
-        "detail": "core.views",
-        "documentation": {}
-    },
-    {
-        "label": "root_view",
-        "kind": 2,
-        "importPath": "core.views",
-        "description": "core.views",
-        "peekOfCode": "def root_view(request):\n    return JsonResponse({\"status\": \"ok\", \"message\": \"Backend is running\"})",
+        "peekOfCode": "class TestimonialsAPI(APIView):\n    def get(self, request):\n        testimonials = Testimonails.objects.all()\n        serializer = TestimonialSerializer(\n            testimonials, many=True, context={\"request\": request}\n        )\n        return Response(serializer.data, status=status.HTTP_200_OK)",
         "detail": "core.views",
         "documentation": {}
     },

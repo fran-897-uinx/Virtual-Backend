@@ -3,6 +3,9 @@ from .models import Home, About, Service, Testimonails
 
 
 class AbsoluteURLMixin:
+    """
+    Helper mixin to return absolute URLs for image fields (works with Cloudinary).
+    """
     def get_absolute_image_url(self, request, image_field):
         if image_field and hasattr(image_field, "url"):
             return request.build_absolute_uri(image_field.url)
