@@ -1,4 +1,6 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
+
 
 # Create your models here.
 
@@ -6,7 +8,7 @@ class Home(models.Model):
     title = models.CharField(max_length=200)
     subtitle = models.CharField(max_length=300, blank=True, null=True)
     welcome_message = models.TextField(blank=True, null=True)
-    hero_image = models.ImageField(upload_to="home/", blank=True, null=True)
+    hero_image = CloudinaryField("image", blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -16,11 +18,7 @@ class Home(models.Model):
 class About(models.Model):
     heading = models.CharField(max_length=200)
     description = models.TextField()
-    profile_image = models.ImageField(
-        upload_to="about/",
-        blank=True,
-        null=True,
-    )
+    profile_image = CloudinaryField("image", blank=True, null=True)
     tech_stack = models.JSONField(default=list, blank=True)  # e.g. ["Next.js", "Django", "Tailwind"]
     created_at = models.DateTimeField(auto_now_add=True)
 
@@ -31,7 +29,7 @@ class About(models.Model):
 class Testimonails(models.Model):
     name = models.CharField(max_length=200)
     testimonial = models.TextField()
-    avatar = models.ImageField(upload_to="testi/", blank=True, null=True)
+    avatar = CloudinaryField("image", blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     role = models.CharField(max_length=200, blank=True, null=True)
     def __str__(self):

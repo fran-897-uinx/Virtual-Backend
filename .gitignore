@@ -1,11 +1,7 @@
 # environment virable
 
 env/*
- 
-#  datainfo
-
-db.sqlite3 
-
+.env.local
 .env*
 
 # Snyk Security Extension - AI Rules (auto-generated)
@@ -13,3 +9,7 @@ db.sqlite3
 
 # Snyk Security Extension - AI Rules (auto-generated)
 .github/instructions/snyk_rules.instructions.md
+
+
+db.sqlite3
+db.sqlite3-journal

@@ -7,7 +7,7 @@ python manage.py makemigrations
 python manage.py migrate
 
 echo "Creating superuser..."
-export $(grep -v '^#' .env | xargs)
+export $(grep -v '^#' .env.local | xargs)
 bash create_ad.sh
 
 

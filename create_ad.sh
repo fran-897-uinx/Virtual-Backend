@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export $(grep -v '^#' .env | xargs)
+export $(grep -v '^#' .env.local | xargs)
 
 python manage.py createsuperuser \
     --username "$DJANGO_SUPERUSER_USERNAME" \

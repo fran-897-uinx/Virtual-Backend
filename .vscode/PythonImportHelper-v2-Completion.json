@@ -60,6 +60,33 @@
         "documentation": {}
     },
     {
+        "label": "cloudinary",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cloudinary",
+        "description": "cloudinary",
+        "detail": "cloudinary",
+        "documentation": {}
+    },
+    {
+        "label": "cloudinary.uploader",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cloudinary.uploader",
+        "description": "cloudinary.uploader",
+        "detail": "cloudinary.uploader",
+        "documentation": {}
+    },
+    {
+        "label": "cloudinary.api",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cloudinary.api",
+        "description": "cloudinary.api",
+        "detail": "cloudinary.api",
+        "documentation": {}
+    },
+    {
         "label": "urllib.parse",
         "kind": 6,
         "isExtraImport": true,
@@ -365,38 +392,6 @@
         "documentation": {}
     },
     {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
@@ -414,6 +409,14 @@
     },
     {
         "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -493,11 +496,76 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
         "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "cloudinary.models",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cloudinary.models",
+        "description": "cloudinary.models",
+        "detail": "cloudinary.models",
+        "documentation": {}
+    },
+    {
+        "label": "CloudinaryField",
+        "importPath": "cloudinary.models",
+        "description": "cloudinary.models",
+        "isExtraImport": true,
+        "detail": "cloudinary.models",
+        "documentation": {}
+    },
+    {
+        "label": "CloudinaryField",
+        "importPath": "cloudinary.models",
+        "description": "cloudinary.models",
+        "isExtraImport": true,
+        "detail": "cloudinary.models",
         "documentation": {}
     },
     {
@@ -733,7 +801,7 @@
         "kind": 5,
         "importPath": "backend_pro.settings",
         "description": "backend_pro.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nenv = environ.Env()\nenviron.Env.read_env(os.path.join(BASE_DIR, \".env\"))\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\n# SECRET_KEY = 'django-insecure-bf&61)=)=3+gv6=a61fm-=8db@$(5xrpdxzc5izdko_d$f&3l*'\n# SECURITY WARNING: don't run with debug turned on in production!\n# DEBUG = True\nALLOWED_HOSTS = os.environ.get(",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\nenv = environ.Env()\nenviron.Env.read_env(os.path.join(BASE_DIR, \".env.local\"))\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\n# SECRET_KEY = 'django-insecure-bf&61)=)=3+gv6=a61fm-=8db@$(5xrpdxzc5izdko_d$f&3l*'\n# SECURITY WARNING: don't run with debug turned on in production!\n# DEBUG = True\nALLOWED_HOSTS = os.environ.get(",
         "detail": "backend_pro.settings",
         "documentation": {}
     },
@@ -742,7 +810,7 @@
         "kind": 5,
         "importPath": "backend_pro.settings",
         "description": "backend_pro.settings",
-        "peekOfCode": "env = environ.Env()\nenviron.Env.read_env(os.path.join(BASE_DIR, \".env\"))\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\n# SECRET_KEY = 'django-insecure-bf&61)=)=3+gv6=a61fm-=8db@$(5xrpdxzc5izdko_d$f&3l*'\n# SECURITY WARNING: don't run with debug turned on in production!\n# DEBUG = True\nALLOWED_HOSTS = os.environ.get(\n    \"ALLOWED_HOSTS\", \"127.0.0.1, localhost, 0.0.0.0, 192.168.1.5\"",
+        "peekOfCode": "env = environ.Env()\nenviron.Env.read_env(os.path.join(BASE_DIR, \".env.local\"))\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\n# SECRET_KEY = 'django-insecure-bf&61)=)=3+gv6=a61fm-=8db@$(5xrpdxzc5izdko_d$f&3l*'\n# SECURITY WARNING: don't run with debug turned on in production!\n# DEBUG = True\nALLOWED_HOSTS = os.environ.get(\n    \"ALLOWED_HOSTS\", \"127.0.0.1, localhost, 0.0.0.0, 192.168.1.5\"",
         "detail": "backend_pro.settings",
         "documentation": {}
     },
@@ -760,7 +828,7 @@
         "kind": 5,
         "importPath": "backend_pro.settings",
         "description": "backend_pro.settings",
-        "peekOfCode": "CORS_ALLOWED_ORIGINS = env.list(\n    \"CORS_ALLOWED_ORIGINS\", default=[\"http://localhost:3000\"]\n)\nCORS_ALLOW_CREDENTIALS = env.bool(\"CORS_ALLOW_CREDENTIALS\", default=True)\nimport urllib.parse\n# print(urllib.parse.quote_plus(\"Hc-+7uQ*?4BXY+x\"))\n# Application definition\nINSTALLED_APPS = [\n    'rest_framework',\n    'django.contrib.admin',",
+        "peekOfCode": "CORS_ALLOWED_ORIGINS = env.list(\n    \"CORS_ALLOWED_ORIGINS\", default=[\"http://localhost:3000\"]\n)\nCORS_ALLOW_CREDENTIALS = env.bool(\"CORS_ALLOW_CREDENTIALS\", default=True)\nimport urllib.parse\n# print(urllib.parse.quote_plus(\"Hc-+7uQ*?4BXY+x\"))\n# Application definition\nINSTALLED_APPS = [\n    \"rest_framework\",\n    \"django.contrib.admin\",",
         "detail": "backend_pro.settings",
         "documentation": {}
     },
@@ -769,7 +837,7 @@
         "kind": 5,
         "importPath": "backend_pro.settings",
         "description": "backend_pro.settings",
-        "peekOfCode": "CORS_ALLOW_CREDENTIALS = env.bool(\"CORS_ALLOW_CREDENTIALS\", default=True)\nimport urllib.parse\n# print(urllib.parse.quote_plus(\"Hc-+7uQ*?4BXY+x\"))\n# Application definition\nINSTALLED_APPS = [\n    'rest_framework',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "CORS_ALLOW_CREDENTIALS = env.bool(\"CORS_ALLOW_CREDENTIALS\", default=True)\nimport urllib.parse\n# print(urllib.parse.quote_plus(\"Hc-+7uQ*?4BXY+x\"))\n# Application definition\nINSTALLED_APPS = [\n    \"rest_framework\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
         "detail": "backend_pro.settings",
         "documentation": {}
     },
@@ -778,7 +846,7 @@
         "kind": 5,
         "importPath": "backend_pro.settings",
         "description": "backend_pro.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'rest_framework',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    \"corsheaders\",\n    'core',",
+        "peekOfCode": "INSTALLED_APPS = [\n    \"rest_framework\",\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"cloudinary\",\n    \"cloudinary_storage\",",
         "detail": "backend_pro.settings",
         "documentation": {}
     },
@@ -837,6 +905,15 @@
         "documentation": {}
     },
     {
+        "label": "DEFAULT_FILE_STORAGE",
+        "kind": 5,
+        "importPath": "backend_pro.settings",
+        "description": "backend_pro.settings",
+        "peekOfCode": "DEFAULT_FILE_STORAGE = \"cloudinary_storage.storage.MediaCloudinaryStorage\"\nprint(DATABASES)\n# Password validation\n# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',",
+        "detail": "backend_pro.settings",
+        "documentation": {}
+    },
+    {
         "label": "AUTH_PASSWORD_VALIDATORS",
         "kind": 5,
         "importPath": "backend_pro.settings",
@@ -850,7 +927,7 @@
         "kind": 5,
         "importPath": "backend_pro.settings",
         "description": "backend_pro.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = BASE_DIR / \"media\"",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Cloudinary config\ncloudinary.config(",
         "detail": "backend_pro.settings",
         "documentation": {}
     },
@@ -859,7 +936,7 @@
         "kind": 5,
         "importPath": "backend_pro.settings",
         "description": "backend_pro.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = BASE_DIR / \"media\"\n# Default primary key field type",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Cloudinary config\ncloudinary.config(\n    cloud_name=os.getenv(\"CLOUDINARY_CLOUD_NAME\"),",
         "detail": "backend_pro.settings",
         "documentation": {}
     },
@@ -868,7 +945,7 @@
         "kind": 5,
         "importPath": "backend_pro.settings",
         "description": "backend_pro.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = BASE_DIR / \"media\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Cloudinary config\ncloudinary.config(\n    cloud_name=os.getenv(\"CLOUDINARY_CLOUD_NAME\"),\n    api_key=os.getenv(\"CLOUDINARY_API_KEY\"),",
         "detail": "backend_pro.settings",
         "documentation": {}
     },
@@ -877,7 +954,7 @@
         "kind": 5,
         "importPath": "backend_pro.settings",
         "description": "backend_pro.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = BASE_DIR / \"media\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Cloudinary config\ncloudinary.config(\n    cloud_name=os.getenv(\"CLOUDINARY_CLOUD_NAME\"),\n    api_key=os.getenv(\"CLOUDINARY_API_KEY\"),\n    api_secret=os.getenv(\"CLOUDINARY_API_SECRET\"),",
         "detail": "backend_pro.settings",
         "documentation": {}
     },
@@ -886,7 +963,7 @@
         "kind": 5,
         "importPath": "backend_pro.settings",
         "description": "backend_pro.settings",
-        "peekOfCode": "STATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = BASE_DIR / \"media\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {\n    \"DEFAULT_RENDERER_CLASSES\": [\n        \"rest_framework.renderers.JSONRenderer\",",
+        "peekOfCode": "STATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Cloudinary config\ncloudinary.config(\n    cloud_name=os.getenv(\"CLOUDINARY_CLOUD_NAME\"),\n    api_key=os.getenv(\"CLOUDINARY_API_KEY\"),\n    api_secret=os.getenv(\"CLOUDINARY_API_SECRET\"),\n    secure=True,\n)\nMEDIA_URL = \"/media/\"",
         "detail": "backend_pro.settings",
         "documentation": {}
     },
@@ -895,7 +972,7 @@
         "kind": 5,
         "importPath": "backend_pro.settings",
         "description": "backend_pro.settings",
-        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = BASE_DIR / \"media\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {\n    \"DEFAULT_RENDERER_CLASSES\": [\n        \"rest_framework.renderers.JSONRenderer\",\n    ]",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Cloudinary config\ncloudinary.config(\n    cloud_name=os.getenv(\"CLOUDINARY_CLOUD_NAME\"),\n    api_key=os.getenv(\"CLOUDINARY_API_KEY\"),\n    api_secret=os.getenv(\"CLOUDINARY_API_SECRET\"),\n    secure=True,\n)\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = BASE_DIR / \"media\"",
         "detail": "backend_pro.settings",
         "documentation": {}
     },
@@ -1125,6 +1202,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "core.migrations.0008_alter_about_profile_image_alter_home_hero_image_and_more",
+        "description": "core.migrations.0008_alter_about_profile_image_alter_home_hero_image_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0007_alter_testimonails_avatar'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='about',\n            name='profile_image',\n            field=cloudinary.models.CloudinaryField(blank=True, max_length=255, null=True, verbose_name='image'),\n        ),",
+        "detail": "core.migrations.0008_alter_about_profile_image_alter_home_hero_image_and_more",
+        "documentation": {}
+    },
+    {
         "label": "HomeAdmin",
         "kind": 6,
         "importPath": "core.admin",
@@ -1174,7 +1260,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class Home(models.Model):\n    title = models.CharField(max_length=200)\n    subtitle = models.CharField(max_length=300, blank=True, null=True)\n    welcome_message = models.TextField(blank=True, null=True)\n    hero_image = models.ImageField(upload_to=\"home/\", blank=True, null=True)\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return self.title\nclass About(models.Model):\n    heading = models.CharField(max_length=200)",
+        "peekOfCode": "class Home(models.Model):\n    title = models.CharField(max_length=200)\n    subtitle = models.CharField(max_length=300, blank=True, null=True)\n    welcome_message = models.TextField(blank=True, null=True)\n    hero_image = CloudinaryField(\"image\", blank=True, null=True)\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return self.title\nclass About(models.Model):\n    heading = models.CharField(max_length=200)",
         "detail": "core.models",
         "documentation": {}
     },
@@ -1183,7 +1269,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class About(models.Model):\n    heading = models.CharField(max_length=200)\n    description = models.TextField()\n    profile_image = models.ImageField(\n        upload_to=\"about/\",\n        blank=True,\n        null=True,\n    )\n    tech_stack = models.JSONField(default=list, blank=True)  # e.g. [\"Next.js\", \"Django\", \"Tailwind\"]\n    created_at = models.DateTimeField(auto_now_add=True)",
+        "peekOfCode": "class About(models.Model):\n    heading = models.CharField(max_length=200)\n    description = models.TextField()\n    profile_image = CloudinaryField(\"image\", blank=True, null=True)\n    tech_stack = models.JSONField(default=list, blank=True)  # e.g. [\"Next.js\", \"Django\", \"Tailwind\"]\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return self.heading\nclass Testimonails(models.Model):\n    name = models.CharField(max_length=200)",
         "detail": "core.models",
         "documentation": {}
     },
@@ -1192,7 +1278,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class Testimonails(models.Model):\n    name = models.CharField(max_length=200)\n    testimonial = models.TextField()\n    avatar = models.ImageField(upload_to=\"testi/\", blank=True, null=True)\n    created_at = models.DateTimeField(auto_now_add=True)\n    role = models.CharField(max_length=200, blank=True, null=True)\n    def __str__(self):\n        return self.name\n# backend/apps/services/models.py\nclass Service(models.Model):",
+        "peekOfCode": "class Testimonails(models.Model):\n    name = models.CharField(max_length=200)\n    testimonial = models.TextField()\n    avatar = CloudinaryField(\"image\", blank=True, null=True)\n    created_at = models.DateTimeField(auto_now_add=True)\n    role = models.CharField(max_length=200, blank=True, null=True)\n    def __str__(self):\n        return self.name\n# backend/apps/services/models.py\nclass Service(models.Model):",
         "detail": "core.models",
         "documentation": {}
     },
@@ -1503,6 +1589,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "django_apps.projects.migrations.0005_alter_certificate_certificate_image_and_more",
+        "description": "django_apps.projects.migrations.0005_alter_certificate_certificate_image_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('projects', '0004_certificate'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='certificate',\n            name='certificate_image',\n            field=cloudinary.models.CloudinaryField(blank=True, max_length=255, null=True, verbose_name='image'),\n        ),",
+        "detail": "django_apps.projects.migrations.0005_alter_certificate_certificate_image_and_more",
+        "documentation": {}
+    },
+    {
         "label": "ProjectAdmin",
         "kind": 6,
         "importPath": "django_apps.projects.admin",
@@ -1534,7 +1629,7 @@
         "kind": 6,
         "importPath": "django_apps.projects.models",
         "description": "django_apps.projects.models",
-        "peekOfCode": "class Project(models.Model):\n    title = models.CharField(max_length=255)\n    description = models.TextField()\n    image = models.URLField(blank=True, null=True)\n    github_link = models.URLField(blank=True, null=True)\n    tech_stack = models.CharField(max_length=200)\n    live_link = models.URLField(blank=True, null=True)\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f\"{self.title} - {self.description} - {self.image} - {self.github_link} - {self.tech_stack} - {self.live_link} - {self.created_at}\"",
+        "peekOfCode": "class Project(models.Model):\n    title = models.CharField(max_length=255)\n    description = models.TextField()\n    image = CloudinaryField(\"image\", blank=True, null=True)\n    github_link = models.URLField(blank=True, null=True)\n    tech_stack = models.CharField(max_length=200)\n    live_link = models.URLField(blank=True, null=True)\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f\"{self.title} - {self.description} - {self.image} - {self.github_link} - {self.tech_stack} - {self.live_link} - {self.created_at}\"",
         "detail": "django_apps.projects.models",
         "documentation": {}
     },
@@ -1543,7 +1638,7 @@
         "kind": 6,
         "importPath": "django_apps.projects.models",
         "description": "django_apps.projects.models",
-        "peekOfCode": "class Certificate(models.Model):\n    certificate_image = models.ImageField(\n        upload_to=\"certificates/\", blank=True, null=True\n    )\n    name = models.CharField(max_length=255)\n    issuer = models.CharField(max_length=255)\n    issue_date = models.DateField()\n    certificate_image = models.ImageField(\n        upload_to=\"certificates/\", blank=True, null=True\n    )",
+        "peekOfCode": "class Certificate(models.Model):\n    name = models.CharField(max_length=255)\n    issuer = models.CharField(max_length=255)\n    issue_date = models.DateField()\n    certificate_image = CloudinaryField(\"image\", blank=True, null=True)\n    def __str__(self):\n        return f\"{self.name} - {self.issuer} - {self.issue_date}\"",
         "detail": "django_apps.projects.models",
         "documentation": {}
     },
