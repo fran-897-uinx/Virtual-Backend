@@ -38,7 +38,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, ".env.local"))
 # DEBUG = True
 
 ALLOWED_HOSTS = os.environ.get(
-    "ALLOWED_HOSTS", "127.0.0.1, localhost, 0.0.0.0, 192.168.1.5"
+    "ALLOWED_HOSTS", "code-port-backend.onrender.com,francisdav.vercel.app,  localhost,"
 ).split(",")
 
 
