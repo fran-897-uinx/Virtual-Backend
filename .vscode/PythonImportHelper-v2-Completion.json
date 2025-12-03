@@ -1341,7 +1341,7 @@
         "kind": 5,
         "importPath": "core.urls",
         "description": "core.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"\", root_view),\n    path(\"api/home/\", views.HomeAPI.as_view(), name=\"home\"),\n    path(\"api/about/\", views.AboutAPI.as_view(), name=\"about\"),\n    path(\"api/testimonials/\", views.TestimonialsAPI.as_view(), name=\"testimonials\"),\n    path(\"api/services/\", views.ServicesAPI.as_view(), name=\"services\"),\n]\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", views.root_view),\n    path(\"api/home/\", views.HomeAPI.as_view(), name=\"home\"),\n    path(\"api/about/\", views.AboutAPI.as_view(), name=\"about\"),\n    path(\"api/testimonials/\", views.TestimonialsAPI.as_view(), name=\"testimonials\"),\n    path(\"api/services/\", views.ServicesAPI.as_view(), name=\"services\"),\n]\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
         "detail": "core.urls",
         "documentation": {}
     },

@@ -1,11 +1,10 @@
 from django.urls import path
-from .import views
-from .views import root_view
+from . import views
 from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
-    path("", root_view),
+    path("", views.root_view),
     path("api/home/", views.HomeAPI.as_view(), name="home"),
     path("api/about/", views.AboutAPI.as_view(), name="about"),
     path("api/testimonials/", views.TestimonialsAPI.as_view(), name="testimonials"),
