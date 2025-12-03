@@ -1341,7 +1341,7 @@
         "kind": 5,
         "importPath": "core.urls",
         "description": "core.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"\", root_view),\n    path(\"api/home/\", views.HomeView.as_view(), name=\"home\"),\n    path(\"api/about/\", views.AboutView.as_view(), name=\"about\"),\n    path(\"api/testimonials/\", views.TestimonailsView.as_view(), name=\"testimonials\"),\n    path(\"api/services/\", views.ServicesView.as_view(), name=\"services\"),\n]\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", root_view),\n    path(\"api/home/\", views.HomeAPI.as_view(), name=\"home\"),\n    path(\"api/about/\", views.AboutAPI.as_view(), name=\"about\"),\n    path(\"api/testimonials/\", views.TestimonialsAPI.as_view(), name=\"testimonials\"),\n    path(\"api/services/\", views.ServicesAPI.as_view(), name=\"services\"),\n]\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
         "detail": "core.urls",
         "documentation": {}
     },
@@ -1378,6 +1378,15 @@
         "importPath": "core.views",
         "description": "core.views",
         "peekOfCode": "class TestimonialsAPI(APIView):\n    def get(self, request):\n        testimonials = Testimonails.objects.all()\n        serializer = TestimonialSerializer(\n            testimonials, many=True, context={\"request\": request}\n        )\n        return Response(serializer.data, status=status.HTTP_200_OK)",
+        "detail": "core.views",
+        "documentation": {}
+    },
+    {
+        "label": "root_view",
+        "kind": 2,
+        "importPath": "core.views",
+        "description": "core.views",
+        "peekOfCode": "def root_view(request):\n    return JsonResponse({\"status\": \"ok\", \"message\": \"Backend is running\"})\nclass HomeAPI(APIView):\n    def get(self, request):\n        home = Home.objects.all()\n        serializer = HomeSerializer(home, many=True, context={\"request\": request})\n        return Response(serializer.data, status=status.HTTP_200_OK)\nclass AboutAPI(APIView):\n    def get(self, request):\n        about = About.objects.all()",
         "detail": "core.views",
         "documentation": {}
     },
