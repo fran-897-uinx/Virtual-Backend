@@ -256,6 +256,14 @@
         "documentation": {}
     },
     {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
         "label": "RedirectView",
         "importPath": "django.views.generic",
         "description": "django.views.generic",
@@ -1377,7 +1385,7 @@
         "kind": 6,
         "importPath": "core.views",
         "description": "core.views",
-        "peekOfCode": "class TestimonialsAPI(APIView):\n    def get(self, request):\n        testimonials = Testimonails.objects.all()\n        serializer = TestimonialSerializer(\n            testimonials, many=True, context={\"request\": request}\n        )\n        return Response(serializer.data, status=status.HTTP_200_OK)",
+        "peekOfCode": "class TestimonialsAPI(APIView):\n    def get(self, request):\n        testimonials = Testimonails.objects.all()\n        serializer = TestimonialSerializer(\n            testimonials, many=True, context={\"request\": request}\n        )\n        return Response(serializer.data, status=status.HTTP_200_OK)\n# views.py",
         "detail": "core.views",
         "documentation": {}
     },
