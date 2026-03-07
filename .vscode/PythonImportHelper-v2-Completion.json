@@ -697,6 +697,14 @@
         "documentation": {}
     },
     {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
         "label": "generics",
         "importPath": "rest_framework",
         "description": "rest_framework",
@@ -808,14 +816,6 @@
         "importPath": "django.db.models.deletion",
         "description": "django.db.models.deletion",
         "detail": "django.db.models.deletion",
-        "documentation": {}
-    },
-    {
-        "label": "ArrayField",
-        "importPath": "django.contrib.postgres.fields",
-        "description": "django.contrib.postgres.fields",
-        "isExtraImport": true,
-        "detail": "django.contrib.postgres.fields",
         "documentation": {}
     },
     {
@@ -1729,7 +1729,7 @@
         "kind": 6,
         "importPath": "django_apps.projects.models",
         "description": "django_apps.projects.models",
-        "peekOfCode": "class Project(models.Model):\n    STATUS = [\n        (\"Not Started\", \"not_started\"),\n        (\"In Progress\", \"in_progress\"),\n        (\"Completed\", \"completed\")\n    ]\n    title = models.CharField(max_length=255)\n    description = models.TextField()\n    github_link = models.URLField(blank=True, null=True)\n    live_link = models.URLField(blank=True, null=True)",
+        "peekOfCode": "class Project(models.Model):\n    STATUS = [\n        (\"not_started\", \"Not Started\"),\n        (\"in_progress\", \"In Progress\"),\n        (\"completed\", \"Completed\"),\n    ]\n    title = models.CharField(max_length=255)\n    description = models.TextField()\n    github_link = models.URLField(blank=True, null=True)\n    live_link = models.URLField(blank=True, null=True)",
         "detail": "django_apps.projects.models",
         "documentation": {}
     },
@@ -1738,7 +1738,7 @@
         "kind": 6,
         "importPath": "django_apps.projects.models",
         "description": "django_apps.projects.models",
-        "peekOfCode": "class ProjectImage(models.Model):\n    project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name=\"images\")\n    image = CloudinaryField(\"image\")\nclass Certificate(models.Model):\n    name = models.CharField(max_length=255)\n    issuer = models.CharField(max_length=255)\n    issue_date = models.DateField()\n    certificate_image = CloudinaryField(\"image\", blank=True, null=True)\n    def __str__(self):\n        return f\"{self.name} - {self.issuer} - {self.issue_date}\"",
+        "peekOfCode": "class ProjectImage(models.Model):\n    project = models.ForeignKey(\n        Project,\n        on_delete=models.CASCADE,\n        related_name=\"images\"\n    )\n    image = CloudinaryField(\"image\")\n    def __str__(self):\n        return f\"{self.project.title} image\"\nclass Certificate(models.Model):",
         "detail": "django_apps.projects.models",
         "documentation": {}
     },
@@ -1756,7 +1756,16 @@
         "kind": 6,
         "importPath": "django_apps.projects.serializers",
         "description": "django_apps.projects.serializers",
-        "peekOfCode": "class AbsoluteURLMixin:\n    def get_absolute_image_url(self, request, image_field):\n        if image_field and hasattr(image_field, \"url\"):\n            return request.build_absolute_uri(image_field.url)\n        return None\nclass ProjectSerializer(serializers.ModelSerializer, AbsoluteURLMixin):\n    image = serializers.SerializerMethodField()\n    class Meta:\n        model = Project\n        fields = \"__all__\"",
+        "peekOfCode": "class AbsoluteURLMixin:\n    def get_absolute_image_url(self, request, image_field):\n        if image_field and hasattr(image_field, \"url\"):\n            return request.build_absolute_uri(image_field.url)\n        return None\nfrom rest_framework import serializers\nfrom .models import Project, ProjectImage\nclass ProjectImageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ProjectImage",
+        "detail": "django_apps.projects.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ProjectImageSerializer",
+        "kind": 6,
+        "importPath": "django_apps.projects.serializers",
+        "description": "django_apps.projects.serializers",
+        "peekOfCode": "class ProjectImageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ProjectImage\n        fields = [\"id\", \"image\"]\nclass ProjectSerializer(serializers.ModelSerializer):\n    images = ProjectImageSerializer(many=True, read_only=True)\n    class Meta:\n        model = Project\n        fields = [\n            \"id\",",
         "detail": "django_apps.projects.serializers",
         "documentation": {}
     },
@@ -1765,7 +1774,7 @@
         "kind": 6,
         "importPath": "django_apps.projects.serializers",
         "description": "django_apps.projects.serializers",
-        "peekOfCode": "class ProjectSerializer(serializers.ModelSerializer, AbsoluteURLMixin):\n    image = serializers.SerializerMethodField()\n    class Meta:\n        model = Project\n        fields = \"__all__\"\n    def get_image(self, obj):\n        request = self.context.get(\"request\")\n        return self.get_absolute_image_url(request, obj.image)\nclass CertificateSerializer(serializers.ModelSerializer, AbsoluteURLMixin):\n    certificate_image = serializers.SerializerMethodField()",
+        "peekOfCode": "class ProjectSerializer(serializers.ModelSerializer):\n    images = ProjectImageSerializer(many=True, read_only=True)\n    class Meta:\n        model = Project\n        fields = [\n            \"id\",\n            \"title\",\n            \"description\",\n            \"github_link\",\n            \"live_link\",",
         "detail": "django_apps.projects.serializers",
         "documentation": {}
     },
@@ -1792,7 +1801,7 @@
         "kind": 6,
         "importPath": "django_apps.projects.views",
         "description": "django_apps.projects.views",
-        "peekOfCode": "class ProjectListView(generics.ListAPIView):\n    queryset = Project.objects.all()\n    serializer_class = ProjectSerializer\nclass ProjectDetailView(generics.RetrieveAPIView):\n    queryset = Project.objects.all()\n    serializer_class = ProjectSerializer\n    lookup_field = \"id\"   # use ID in the URL\nclass CertificateListView(generics.ListAPIView):\n    queryset = Certificate.objects.all()\n    serializer_class = CertificateSerializer",
+        "peekOfCode": "class ProjectListView(generics.ListAPIView):\n    queryset = Project.objects.prefetch_related(\"images\").all().order_by(\"-created_at\")\n    serializer_class = ProjectSerializer\nclass ProjectDetailView(generics.RetrieveAPIView):\n    queryset = Project.objects.prefetch_related(\"images\").all()\n    serializer_class = ProjectSerializer\n    lookup_field = \"id\"\nclass CertificateListView(generics.ListAPIView):\n    queryset = Certificate.objects.all()\n    serializer_class = CertificateSerializer",
         "detail": "django_apps.projects.views",
         "documentation": {}
     },
@@ -1801,7 +1810,7 @@
         "kind": 6,
         "importPath": "django_apps.projects.views",
         "description": "django_apps.projects.views",
-        "peekOfCode": "class ProjectDetailView(generics.RetrieveAPIView):\n    queryset = Project.objects.all()\n    serializer_class = ProjectSerializer\n    lookup_field = \"id\"   # use ID in the URL\nclass CertificateListView(generics.ListAPIView):\n    queryset = Certificate.objects.all()\n    serializer_class = CertificateSerializer\nclass CertificateDetailView(generics.RetrieveAPIView):\n    queryset = Certificate.objects.all()\n    serializer_class = CertificateSerializer",
+        "peekOfCode": "class ProjectDetailView(generics.RetrieveAPIView):\n    queryset = Project.objects.prefetch_related(\"images\").all()\n    serializer_class = ProjectSerializer\n    lookup_field = \"id\"\nclass CertificateListView(generics.ListAPIView):\n    queryset = Certificate.objects.all()\n    serializer_class = CertificateSerializer\nclass CertificateDetailView(generics.RetrieveAPIView):\n    queryset = Certificate.objects.all()\n    serializer_class = CertificateSerializer",
         "detail": "django_apps.projects.views",
         "documentation": {}
     },
