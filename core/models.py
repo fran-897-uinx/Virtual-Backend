@@ -27,7 +27,7 @@ class About(models.Model):
 
 
 class Testimonails(models.Model):
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200, unique=True)
     testimonial = models.TextField()
     avatar = CloudinaryField("image", blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)

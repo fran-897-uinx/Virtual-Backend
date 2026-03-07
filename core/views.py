@@ -1,4 +1,5 @@
 from rest_framework.views import APIView
+from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework import status
 from .models import Home, About, Service, Testimonails
@@ -38,12 +39,7 @@ class ServicesAPI(APIView):
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
-class TestimonialsAPI(APIView):
-    def get(self, request):
-        testimonials = Testimonails.objects.all()
-        serializer = TestimonialSerializer(
-            testimonials, many=True, context={"request": request}
-        )
-        return Response(serializer.data, status=status.HTTP_200_OK)
-
+class TestimonialsAPI(viewsets.ModelViewSet):
+    queryset = Testimonails.objects.all().order_by("-created_at")[:10]
+    serializer_class = TestimonialSerializer
 # views.py

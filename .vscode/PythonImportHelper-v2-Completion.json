@@ -400,14 +400,6 @@
         "documentation": {}
     },
     {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
@@ -441,30 +433,6 @@
     },
     {
         "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -529,6 +497,70 @@
     },
     {
         "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -602,6 +634,14 @@
     },
     {
         "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "viewsets",
         "importPath": "rest_framework",
         "description": "rest_framework",
         "isExtraImport": true,
@@ -697,6 +737,14 @@
         "documentation": {}
     },
     {
+        "label": "DefaultRouter",
+        "importPath": "rest_framework.routers",
+        "description": "rest_framework.routers",
+        "isExtraImport": true,
+        "detail": "rest_framework.routers",
+        "documentation": {}
+    },
+    {
         "label": "APIView",
         "importPath": "rest_framework.views",
         "description": "rest_framework.views",
@@ -751,6 +799,23 @@
         "description": "django.core.mail",
         "isExtraImport": true,
         "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "ArrayField",
+        "importPath": "django.contrib.postgres.fields",
+        "description": "django.contrib.postgres.fields",
+        "isExtraImport": true,
+        "detail": "django.contrib.postgres.fields",
         "documentation": {}
     },
     {
@@ -1219,6 +1284,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "core.migrations.0009_alter_testimonails_name",
+        "description": "core.migrations.0009_alter_testimonails_name",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0008_alter_about_profile_image_alter_home_hero_image_and_more'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='testimonails',\n            name='name',\n            field=models.CharField(max_length=200, unique=True),\n        ),",
+        "detail": "core.migrations.0009_alter_testimonails_name",
+        "documentation": {}
+    },
+    {
         "label": "HomeAdmin",
         "kind": 6,
         "importPath": "core.admin",
@@ -1277,7 +1351,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class About(models.Model):\n    heading = models.CharField(max_length=200)\n    description = models.TextField()\n    profile_image = CloudinaryField(\"image\", blank=True, null=True)\n    tech_stack = models.JSONField(default=list, blank=True)  # e.g. [\"Next.js\", \"Django\", \"Tailwind\"]\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return self.heading\nclass Testimonails(models.Model):\n    name = models.CharField(max_length=200)",
+        "peekOfCode": "class About(models.Model):\n    heading = models.CharField(max_length=200)\n    description = models.TextField()\n    profile_image = CloudinaryField(\"image\", blank=True, null=True)\n    tech_stack = models.JSONField(default=list, blank=True)  # e.g. [\"Next.js\", \"Django\", \"Tailwind\"]\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return self.heading\nclass Testimonails(models.Model):\n    name = models.CharField(max_length=200, unique=True)",
         "detail": "core.models",
         "documentation": {}
     },
@@ -1286,7 +1360,7 @@
         "kind": 6,
         "importPath": "core.models",
         "description": "core.models",
-        "peekOfCode": "class Testimonails(models.Model):\n    name = models.CharField(max_length=200)\n    testimonial = models.TextField()\n    avatar = CloudinaryField(\"image\", blank=True, null=True)\n    created_at = models.DateTimeField(auto_now_add=True)\n    role = models.CharField(max_length=200, blank=True, null=True)\n    def __str__(self):\n        return self.name\n# backend/apps/services/models.py\nclass Service(models.Model):",
+        "peekOfCode": "class Testimonails(models.Model):\n    name = models.CharField(max_length=200, unique=True)\n    testimonial = models.TextField()\n    avatar = CloudinaryField(\"image\", blank=True, null=True)\n    created_at = models.DateTimeField(auto_now_add=True)\n    role = models.CharField(max_length=200, blank=True, null=True)\n    def __str__(self):\n        return self.name\n# backend/apps/services/models.py\nclass Service(models.Model):",
         "detail": "core.models",
         "documentation": {}
     },
@@ -1345,11 +1419,20 @@
         "documentation": {}
     },
     {
+        "label": "router",
+        "kind": 5,
+        "importPath": "core.urls",
+        "description": "core.urls",
+        "peekOfCode": "router = DefaultRouter()\nrouter.register(r'api/testimonials', TestimonialsAPI, basename='testimonials')\nurlpatterns = [\n    path(\"\", views.root_view),\n    path(\"api/home/\", views.HomeAPI.as_view(), name=\"home\"),\n    path(\"api/about/\", views.AboutAPI.as_view(), name=\"about\"),\n    path(\"api/services/\", views.ServicesAPI.as_view(), name=\"services\"),\n]\n# add router urls\nurlpatterns += router.urls",
+        "detail": "core.urls",
+        "documentation": {}
+    },
+    {
         "label": "urlpatterns",
         "kind": 5,
         "importPath": "core.urls",
         "description": "core.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"\", views.root_view),\n    path(\"api/home/\", views.HomeAPI.as_view(), name=\"home\"),\n    path(\"api/about/\", views.AboutAPI.as_view(), name=\"about\"),\n    path(\"api/testimonials/\", views.TestimonialsAPI.as_view(), name=\"testimonials\"),\n    path(\"api/services/\", views.ServicesAPI.as_view(), name=\"services\"),\n]\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", views.root_view),\n    path(\"api/home/\", views.HomeAPI.as_view(), name=\"home\"),\n    path(\"api/about/\", views.AboutAPI.as_view(), name=\"about\"),\n    path(\"api/services/\", views.ServicesAPI.as_view(), name=\"services\"),\n]\n# add router urls\nurlpatterns += router.urls\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
         "detail": "core.urls",
         "documentation": {}
     },
@@ -1376,7 +1459,7 @@
         "kind": 6,
         "importPath": "core.views",
         "description": "core.views",
-        "peekOfCode": "class ServicesAPI(APIView):\n    def get(self, request):\n        services = Service.objects.all()\n        serializer = ServicesSerializer(\n            services, many=True, context={\"request\": request}\n        )\n        return Response(serializer.data, status=status.HTTP_200_OK)\nclass TestimonialsAPI(APIView):\n    def get(self, request):\n        testimonials = Testimonails.objects.all()",
+        "peekOfCode": "class ServicesAPI(APIView):\n    def get(self, request):\n        services = Service.objects.all()\n        serializer = ServicesSerializer(\n            services, many=True, context={\"request\": request}\n        )\n        return Response(serializer.data, status=status.HTTP_200_OK)\nclass TestimonialsAPI(viewsets.ModelViewSet):\n    queryset = Testimonails.objects.all().order_by(\"-created_at\")[:10]\n    serializer_class = TestimonialSerializer",
         "detail": "core.views",
         "documentation": {}
     },
@@ -1385,7 +1468,7 @@
         "kind": 6,
         "importPath": "core.views",
         "description": "core.views",
-        "peekOfCode": "class TestimonialsAPI(APIView):\n    def get(self, request):\n        testimonials = Testimonails.objects.all()\n        serializer = TestimonialSerializer(\n            testimonials, many=True, context={\"request\": request}\n        )\n        return Response(serializer.data, status=status.HTTP_200_OK)\n# views.py",
+        "peekOfCode": "class TestimonialsAPI(viewsets.ModelViewSet):\n    queryset = Testimonails.objects.all().order_by(\"-created_at\")[:10]\n    serializer_class = TestimonialSerializer\n# views.py",
         "detail": "core.views",
         "documentation": {}
     },
@@ -1606,6 +1689,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "django_apps.projects.migrations.0006_remove_project_image_project_status_project_version_and_more",
+        "description": "django_apps.projects.migrations.0006_remove_project_image_project_status_project_version_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('projects', '0005_alter_certificate_certificate_image_and_more'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='project',\n            name='image',\n        ),\n        migrations.AddField(",
+        "detail": "django_apps.projects.migrations.0006_remove_project_image_project_status_project_version_and_more",
+        "documentation": {}
+    },
+    {
         "label": "ProjectAdmin",
         "kind": 6,
         "importPath": "django_apps.projects.admin",
@@ -1637,7 +1729,16 @@
         "kind": 6,
         "importPath": "django_apps.projects.models",
         "description": "django_apps.projects.models",
-        "peekOfCode": "class Project(models.Model):\n    title = models.CharField(max_length=255)\n    description = models.TextField()\n    image = CloudinaryField(\"image\", blank=True, null=True)\n    github_link = models.URLField(blank=True, null=True)\n    tech_stack = models.CharField(max_length=200)\n    live_link = models.URLField(blank=True, null=True)\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f\"{self.title} - {self.description} - {self.image} - {self.github_link} - {self.tech_stack} - {self.live_link} - {self.created_at}\"",
+        "peekOfCode": "class Project(models.Model):\n    STATUS = [\n        (\"Not Started\", \"not_started\"),\n        (\"In Progress\", \"in_progress\"),\n        (\"Completed\", \"completed\")\n    ]\n    title = models.CharField(max_length=255)\n    description = models.TextField()\n    github_link = models.URLField(blank=True, null=True)\n    live_link = models.URLField(blank=True, null=True)",
+        "detail": "django_apps.projects.models",
+        "documentation": {}
+    },
+    {
+        "label": "ProjectImage",
+        "kind": 6,
+        "importPath": "django_apps.projects.models",
+        "description": "django_apps.projects.models",
+        "peekOfCode": "class ProjectImage(models.Model):\n    project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name=\"images\")\n    image = CloudinaryField(\"image\")\nclass Certificate(models.Model):\n    name = models.CharField(max_length=255)\n    issuer = models.CharField(max_length=255)\n    issue_date = models.DateField()\n    certificate_image = CloudinaryField(\"image\", blank=True, null=True)\n    def __str__(self):\n        return f\"{self.name} - {self.issuer} - {self.issue_date}\"",
         "detail": "django_apps.projects.models",
         "documentation": {}
     },
