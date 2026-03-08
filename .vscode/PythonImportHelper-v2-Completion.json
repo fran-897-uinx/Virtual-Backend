@@ -496,78 +496,6 @@
         "documentation": {}
     },
     {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -1648,53 +1576,8 @@
         "kind": 6,
         "importPath": "django_apps.projects.migrations.0001_initial",
         "description": "django_apps.projects.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Project',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('title', models.CharField(max_length=255)),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Certificate',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(max_length=255)),",
         "detail": "django_apps.projects.migrations.0001_initial",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "django_apps.projects.migrations.0002_project_external_images",
-        "description": "django_apps.projects.migrations.0002_project_external_images",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('projects', '0001_initial'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='project',\n            name='external_images',\n            field=models.JSONField(blank=True, default=list),\n        ),",
-        "detail": "django_apps.projects.migrations.0002_project_external_images",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "django_apps.projects.migrations.0003_remove_project_external_images_alter_project_image",
-        "description": "django_apps.projects.migrations.0003_remove_project_external_images_alter_project_image",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('projects', '0002_project_external_images'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='project',\n            name='external_images',\n        ),\n        migrations.AlterField(",
-        "detail": "django_apps.projects.migrations.0003_remove_project_external_images_alter_project_image",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "django_apps.projects.migrations.0004_certificate",
-        "description": "django_apps.projects.migrations.0004_certificate",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('projects', '0003_remove_project_external_images_alter_project_image'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Certificate',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(max_length=255)),",
-        "detail": "django_apps.projects.migrations.0004_certificate",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "django_apps.projects.migrations.0005_alter_certificate_certificate_image_and_more",
-        "description": "django_apps.projects.migrations.0005_alter_certificate_certificate_image_and_more",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('projects', '0004_certificate'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='certificate',\n            name='certificate_image',\n            field=cloudinary.models.CloudinaryField(blank=True, max_length=255, null=True, verbose_name='image'),\n        ),",
-        "detail": "django_apps.projects.migrations.0005_alter_certificate_certificate_image_and_more",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "django_apps.projects.migrations.0006_remove_project_image_project_status_project_version_and_more",
-        "description": "django_apps.projects.migrations.0006_remove_project_image_project_status_project_version_and_more",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('projects', '0005_alter_certificate_certificate_image_and_more'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='project',\n            name='image',\n        ),\n        migrations.AddField(",
-        "detail": "django_apps.projects.migrations.0006_remove_project_image_project_status_project_version_and_more",
         "documentation": {}
     },
     {
