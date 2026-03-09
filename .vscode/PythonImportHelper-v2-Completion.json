@@ -747,6 +747,14 @@
         "documentation": {}
     },
     {
+        "label": "ProjectImage",
+        "importPath": "django_apps.projects.models",
+        "description": "django_apps.projects.models",
+        "isExtraImport": true,
+        "detail": "django_apps.projects.models",
+        "documentation": {}
+    },
+    {
         "label": "render",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
@@ -910,7 +918,7 @@
         "kind": 5,
         "importPath": "backend_pro.settings",
         "description": "backend_pro.settings",
-        "peekOfCode": "DEFAULT_FILE_STORAGE = \"cloudinary_storage.storage.MediaCloudinaryStorage\"\nprint(DATABASES)\n# Password validation\n# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',",
+        "peekOfCode": "DEFAULT_FILE_STORAGE = \"cloudinary_storage.storage.MediaCloudinaryStorage\"\nprint(DATABASES[\"default\"][\"ENGINE\"])\n# Password validation\n# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',",
         "detail": "backend_pro.settings",
         "documentation": {}
     },
@@ -1585,7 +1593,16 @@
         "kind": 6,
         "importPath": "django_apps.projects.admin",
         "description": "django_apps.projects.admin",
-        "peekOfCode": "class ProjectAdmin(admin.ModelAdmin):\n    list_display = ('title','github_link')\n    list_filter = (\"title\",)\n    search_fields = ['title', 'description']\n@admin.register(Certificate)\nclass CertificateAdmin(admin.ModelAdmin):\n    list_display = (\"name\", \"issuer\", \"issue_date\")\n    list_filter = (\"issuer\",)\n    search_fields = [\"name\", \"issuer\"]",
+        "peekOfCode": "class ProjectAdmin(admin.ModelAdmin):\n    list_display = ('title','github_link')\n    list_filter = (\"title\",)\n    search_fields = ['title', 'description']\n@admin.register(ProjectImage)\nclass ProjectImageAdmin(admin.ModelAdmin):\n    list_display = (\"project\",)\n    list_filter = (\"project\",)\n    search_fields = (\"project\",)\n@admin.register(Certificate)",
+        "detail": "django_apps.projects.admin",
+        "documentation": {}
+    },
+    {
+        "label": "ProjectImageAdmin",
+        "kind": 6,
+        "importPath": "django_apps.projects.admin",
+        "description": "django_apps.projects.admin",
+        "peekOfCode": "class ProjectImageAdmin(admin.ModelAdmin):\n    list_display = (\"project\",)\n    list_filter = (\"project\",)\n    search_fields = (\"project\",)\n@admin.register(Certificate)\nclass CertificateAdmin(admin.ModelAdmin):\n    list_display = (\"name\", \"issuer\", \"issue_date\")\n    list_filter = (\"issuer\",)\n    search_fields = [\"name\", \"issuer\"]",
         "detail": "django_apps.projects.admin",
         "documentation": {}
     },
