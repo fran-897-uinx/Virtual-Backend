@@ -10,21 +10,16 @@ class AbsoluteURLMixin:
 
 
 
-class ProjectSerializer(serializers.ModelSerializer):
+class ProjectSerializer(serializers.ModelSerializer,AbsoluteURLMixin):
+    image = serializers.SerializerMethodField()
     class Meta:
         model = Project
-        fields = [
-            "id",
-            "title",
-            "description",
-            "github_link",
-            "live_link",
-            "tech_stack",
-            "colaborators",
-            "state",
-            "created_at",
-            "image",
-        ]
+        fields ="__all__"
+        
+        
+    def get_image(self, obj):
+        request = self.context.get("request")
+        return self.get_absolute_image_url(request, obj.image)
         
 class CertificateSerializer(serializers.ModelSerializer, AbsoluteURLMixin):
     certificate_image = serializers.SerializerMethodField()
