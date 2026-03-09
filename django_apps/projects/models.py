@@ -19,14 +19,9 @@ class Project(models.Model):
 
     tech_stack = models.JSONField(blank=True, default=list)
 
-    version = models.CharField(max_length=50, blank=True, null=True)
+    colaborators = models.JSONField(blank=True, default=list)
 
-    status = models.CharField(
-        max_length=20,
-        choices=STATUS,
-        default="in_progress"
-    )
-
+    state = models.CharField(max_length=20, choices=STATUS, default="not_started")
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -44,7 +39,6 @@ class ProjectImage(models.Model):
 
     def __str__(self):
         return f"{self.project.title} image"
-    
     
 
 class Certificate(models.Model):

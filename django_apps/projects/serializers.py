@@ -10,7 +10,7 @@ class AbsoluteURLMixin:
 
 
 from rest_framework import serializers
-from .models import Project, ProjectImage
+from .models import Project, ProjectImage, Certificate
 
 
 class ProjectImageSerializer(serializers.ModelSerializer):

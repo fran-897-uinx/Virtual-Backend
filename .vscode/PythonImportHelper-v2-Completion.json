@@ -496,6 +496,46 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -819,7 +859,7 @@
         "kind": 5,
         "importPath": "backend_pro.settings",
         "description": "backend_pro.settings",
-        "peekOfCode": "env = environ.Env()\nenviron.Env.read_env(os.path.join(BASE_DIR, \".env.local\"))\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\n# SECRET_KEY = 'django-insecure-bf&61)=)=3+gv6=a61fm-=8db@$(5xrpdxzc5izdko_d$f&3l*'\n# SECURITY WARNING: don't run with debug turned on in production!\n# DEBUG = True\nALLOWED_HOSTS = os.environ.get(\n    \"ALLOWED_HOSTS\", \"code-port-backend.onrender.com,francisdav.vercel.app,  localhost,\"",
+        "peekOfCode": "env = environ.Env()\nenviron.Env.read_env(os.path.join(BASE_DIR, \".env.local\"))\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\n# SECRET_KEY = 'django-insecure-bf&61)=)=3+gv6=a61fm-=8db@$(5xrpdxzc5izdko_d$f&3l*'\n# SECURITY WARNING: don't run with debug turned on in production!\n# DEBUG = True\nALLOWED_HOSTS = os.environ.get(\n    \"ALLOWED_HOSTS\", \"code-port-backend.onrender.com,francisdav.vercel.app, localhost,127.0.0.1\"",
         "detail": "backend_pro.settings",
         "documentation": {}
     },
@@ -828,7 +868,7 @@
         "kind": 5,
         "importPath": "backend_pro.settings",
         "description": "backend_pro.settings",
-        "peekOfCode": "ALLOWED_HOSTS = os.environ.get(\n    \"ALLOWED_HOSTS\", \"code-port-backend.onrender.com,francisdav.vercel.app,  localhost,\"\n).split(\",\")\n# CORS\nCORS_ALLOWED_ORIGINS = env.list(\n    \"CORS_ALLOWED_ORIGINS\", default=[\"http://localhost:3000\"]\n)\nCORS_ALLOW_CREDENTIALS = env.bool(\"CORS_ALLOW_CREDENTIALS\", default=True)\nimport urllib.parse\n# print(urllib.parse.quote_plus(\"Hc-+7uQ*?4BXY+x\"))",
+        "peekOfCode": "ALLOWED_HOSTS = os.environ.get(\n    \"ALLOWED_HOSTS\", \"code-port-backend.onrender.com,francisdav.vercel.app, localhost,127.0.0.1\"\n).split(\",\")\n# CORS\nCORS_ALLOWED_ORIGINS = env.list(\n    \"CORS_ALLOWED_ORIGINS\", default=[\"http://localhost:3000\"]\n)\nCORS_ALLOW_CREDENTIALS = env.bool(\"CORS_ALLOW_CREDENTIALS\", default=True)\nimport urllib.parse\n# print(urllib.parse.quote_plus(\"Hc-+7uQ*?4BXY+x\"))",
         "detail": "backend_pro.settings",
         "documentation": {}
     },
@@ -1589,6 +1629,33 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "django_apps.projects.migrations.0002_remove_project_state_delete_projectimage",
+        "description": "django_apps.projects.migrations.0002_remove_project_state_delete_projectimage",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('projects', '0001_initial'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='project',\n            name='state',\n        ),\n        migrations.DeleteModel(",
+        "detail": "django_apps.projects.migrations.0002_remove_project_state_delete_projectimage",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "django_apps.projects.migrations.0003_project_state",
+        "description": "django_apps.projects.migrations.0003_project_state",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('projects', '0002_remove_project_state_delete_projectimage'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='project',\n            name='state',\n            field=models.CharField(choices=[('not_started', 'Not Started'), ('in_progress', 'In Progress'), ('completed', 'Completed')], default='not_started', max_length=20),\n        ),",
+        "detail": "django_apps.projects.migrations.0003_project_state",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "django_apps.projects.migrations.0004_projectimage",
+        "description": "django_apps.projects.migrations.0004_projectimage",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('projects', '0003_project_state'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='ProjectImage',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('image', cloudinary.models.CloudinaryField(max_length=255, verbose_name='image')),",
+        "detail": "django_apps.projects.migrations.0004_projectimage",
+        "documentation": {}
+    },
+    {
         "label": "ProjectAdmin",
         "kind": 6,
         "importPath": "django_apps.projects.admin",
@@ -1656,7 +1723,7 @@
         "kind": 6,
         "importPath": "django_apps.projects.serializers",
         "description": "django_apps.projects.serializers",
-        "peekOfCode": "class AbsoluteURLMixin:\n    def get_absolute_image_url(self, request, image_field):\n        if image_field and hasattr(image_field, \"url\"):\n            return request.build_absolute_uri(image_field.url)\n        return None\nfrom rest_framework import serializers\nfrom .models import Project, ProjectImage\nclass ProjectImageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ProjectImage",
+        "peekOfCode": "class AbsoluteURLMixin:\n    def get_absolute_image_url(self, request, image_field):\n        if image_field and hasattr(image_field, \"url\"):\n            return request.build_absolute_uri(image_field.url)\n        return None\nfrom rest_framework import serializers\nfrom .models import Project, ProjectImage, Certificate\nclass ProjectImageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ProjectImage",
         "detail": "django_apps.projects.serializers",
         "documentation": {}
     },
