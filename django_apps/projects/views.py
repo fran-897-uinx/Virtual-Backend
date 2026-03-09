@@ -7,12 +7,12 @@ from .serializers import ProjectSerializer, CertificateSerializer
 # Create your views here.
 
 class ProjectListView(generics.ListAPIView):
-    queryset = Project.objects.prefetch_related("images").all().order_by("-created_at")
+    queryset = Project.objects.all().order_by("-created_at")
     serializer_class = ProjectSerializer
 
 
 class ProjectDetailView(generics.RetrieveAPIView):
-    queryset = Project.objects.prefetch_related("images").all()
+    queryset = Project.objects.all()
     serializer_class = ProjectSerializer
     lookup_field = "id"
 

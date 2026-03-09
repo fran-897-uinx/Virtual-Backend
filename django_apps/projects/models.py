@@ -20,26 +20,14 @@ class Project(models.Model):
     tech_stack = models.JSONField(blank=True, default=list)
 
     colaborators = models.JSONField(blank=True, default=list)
-
+    
+    image = CloudinaryField("image", null=True, blank=True)
     state = models.CharField(max_length=20, choices=STATUS, default="not_started")
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.title
 
-
-class ProjectImage(models.Model):
-    project = models.ForeignKey(
-        Project,
-        on_delete=models.CASCADE,
-        related_name="images"
-    )
-
-    image = CloudinaryField("image")
-
-    def __str__(self):
-        return f"{self.project.title} image"
-    
 
 class Certificate(models.Model):
     name = models.CharField(max_length=255)

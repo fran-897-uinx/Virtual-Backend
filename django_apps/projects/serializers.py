@@ -1,7 +1,5 @@
 from rest_framework import serializers
 from .models import Project, Certificate
-
-
 class AbsoluteURLMixin:
     def get_absolute_image_url(self, request, image_field):
         if image_field and hasattr(image_field, "url"):
@@ -9,19 +7,10 @@ class AbsoluteURLMixin:
         return None
 
 
-from rest_framework import serializers
-from .models import Project, ProjectImage, Certificate
 
-
-class ProjectImageSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = ProjectImage
-        fields = ["id", "image"]
 
 
 class ProjectSerializer(serializers.ModelSerializer):
-    images = ProjectImageSerializer(many=True, read_only=True)
-
     class Meta:
         model = Project
         fields = [
@@ -34,7 +23,7 @@ class ProjectSerializer(serializers.ModelSerializer):
             "colaborators",
             "state",
             "created_at",
-            "images",
+            "image",
         ]
         
 class CertificateSerializer(serializers.ModelSerializer, AbsoluteURLMixin):

@@ -665,14 +665,6 @@
         "documentation": {}
     },
     {
-        "label": "serializers",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
         "label": "generics",
         "importPath": "rest_framework",
         "description": "rest_framework",
@@ -1723,7 +1715,7 @@
         "kind": 6,
         "importPath": "django_apps.projects.serializers",
         "description": "django_apps.projects.serializers",
-        "peekOfCode": "class AbsoluteURLMixin:\n    def get_absolute_image_url(self, request, image_field):\n        if image_field and hasattr(image_field, \"url\"):\n            return request.build_absolute_uri(image_field.url)\n        return None\nfrom rest_framework import serializers\nfrom .models import Project, ProjectImage, Certificate\nclass ProjectImageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ProjectImage",
+        "peekOfCode": "class AbsoluteURLMixin:\n    def get_absolute_image_url(self, request, image_field):\n        if image_field and hasattr(image_field, \"url\"):\n            return request.build_absolute_uri(image_field.url)\n        return None\nclass ProjectImageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = ProjectImage\n        fields = [\"id\", \"image\"]\nclass ProjectSerializer(serializers.ModelSerializer):",
         "detail": "django_apps.projects.serializers",
         "documentation": {}
     },
