@@ -31,8 +31,8 @@ class ProjectSerializer(serializers.ModelSerializer):
             "github_link",
             "live_link",
             "tech_stack",
-            "status",
-            "version",
+            "colaborators",
+            "state",
             "created_at",
             "images",
         ]
