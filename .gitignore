@@ -1,15 +1,17 @@
-# environment virable
-env
-env/*
-.env.local*
+# Environment variables
 .env*
+.env.local*
 
-# Snyk Security Extension - AI Rules (auto-generated)
-.github\instructions\snyk_rules.instructions.md
+# Virtual environments
+env/
+venv/
 
-# Snyk Security Extension - AI Rules (auto-generated)
+# Snyk
 .github/instructions/snyk_rules.instructions.md
 
-admincre*
+# Local/dev files
+/admincre
+
+# Database (only if using SQLite)
 db.sqlite3
 db.sqlite3-journal
