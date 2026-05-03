@@ -44,7 +44,7 @@ ALLOWED_HOSTS = os.environ.get(
 
 # CORS
 CORS_ALLOWED_ORIGINS = env.list(
-    "CORS_ALLOWED_ORIGINS", default=["http://localhost:3000","https://francisdave.vercel.app"]
+    "CORS_ALLOWED_ORIGINS", default=["https://francisdave.vercel.app"]
 )
 CORS_ALLOW_CREDENTIALS = env.bool("CORS_ALLOW_CREDENTIALS", default=True)
 
