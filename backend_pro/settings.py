@@ -38,13 +38,13 @@ environ.Env.read_env(os.path.join(BASE_DIR, ".env.local"))
 # DEBUG = True
 
 ALLOWED_HOSTS = os.environ.get(
-    "ALLOWED_HOSTS", "code-port-backend.onrender.com,francisdav.vercel.app, localhost,127.0.0.1"
+    "ALLOWED_HOSTS", "code-port-backend.onrender.com,francisdave.vercel.app, localhost,127.0.0.1"
 ).split(",")
 
 
 # CORS
 CORS_ALLOWED_ORIGINS = env.list(
-    "CORS_ALLOWED_ORIGINS", default=["http://localhost:3000"]
+    "CORS_ALLOWED_ORIGINS", default=["http://localhost:3000","https://francisdave.vercel.app"]
 )
 CORS_ALLOW_CREDENTIALS = env.bool("CORS_ALLOW_CREDENTIALS", default=True)
 
